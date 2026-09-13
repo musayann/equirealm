@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "A full-screen, zoomable Equal Earth world map with political, relief, satellite and night-light layers.",
-  "homepage": "https://map.aros.app",
+  "homepage": "https://maps.aros.app",
   "repository": "github:musayann/equirealm",
   "scripts": {
     "dev": "next dev",

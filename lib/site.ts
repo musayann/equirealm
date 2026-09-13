@@ -6,7 +6,7 @@ export const siteConfig = {
     "Explore a full-screen, zoomable Equal Earth world map with political, relief, satellite and night-light layers, rivers, cities and seven map projections.",
   tagline: "Interactive world map on the Equal Earth projection",
   /** Override with NEXT_PUBLIC_SITE_URL when deploying anywhere else. */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://map.aros.app").replace(/\/+$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://maps.aros.app").replace(/\/+$/, ""),
   repo: "https://github.com/musayann/equirealm",
   author: { name: "Yannick Musafiri", url: "https://github.com/musayann" },
   themeColor: "#0b1622",
