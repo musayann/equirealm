@@ -53,7 +53,7 @@ export interface PlaceProps {
  * bordering countries share a palette slot. Highest-degree countries are
  * coloured first, which keeps the colour count low in practice.
  */
-function colourCountries(adjacency: number[][], paletteSize: number): number[] {
+export function colourCountries(adjacency: number[][], paletteSize: number): number[] {
   const colours = new Array<number>(adjacency.length).fill(-1);
   const order = adjacency
     .map((_, i) => i)
@@ -71,7 +71,7 @@ function colourCountries(adjacency: number[][], paletteSize: number): number[] {
   return colours.map((c) => c % paletteSize);
 }
 
-const PALETTE_SLOTS = 9;
+export const PALETTE_SLOTS = 9;
 
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url);

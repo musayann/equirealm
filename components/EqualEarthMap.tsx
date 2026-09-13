@@ -21,7 +21,7 @@ import {
   type ExtraData,
   type WorldData,
 } from "@/lib/data";
-import type { ProjectionId } from "@/lib/projections";
+import { getProjectionSpec, type ProjectionId } from "@/lib/projections";
 import { buildProjection, computeBaseView, renderMap, type RenderState } from "@/lib/render";
 import {
   DEFAULT_LAYERS,
@@ -354,6 +354,8 @@ export default function EqualEarthMap() {
     >
       <canvas
         ref={canvasRef}
+        role="img"
+        aria-label={`World map: ${getBaseStyle(styleId).label} base map, ${getProjectionSpec(projectionId).label} projection`}
         className="block h-full w-full cursor-grab touch-none active:cursor-grabbing"
         style={{ width: size.width, height: size.height }}
         onPointerMove={handlePointerMove}

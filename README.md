@@ -1,5 +1,7 @@
 # Equirealm
 
+**Live:** <https://map.aros.app>
+
 A full-screen, zoomable world map on the **Equal Earth** projection, built with Next.js and
 `d3-geo`. Switch between a political map, shaded relief, satellite imagery and night lights, and
 toggle vector overlays on top of any of them.
@@ -8,6 +10,10 @@ toggle vector overlays on top of any of them.
 npm run dev    # http://localhost:3000
 npm run build && npm start
 ```
+
+Canonical URLs, Open Graph tags, the sitemap and `robots.txt` point at
+`https://map.aros.app`; set `NEXT_PUBLIC_SITE_URL` when deploying anywhere else. Icons
+are generated from Natural Earth land by `node scripts/make-icons.mjs`.
 
 ## What's in it
 
@@ -71,18 +77,20 @@ lands on 128 — neutral for the soft-light blend it is composited with.
 ## Layout
 
 ```
-app/                  Next.js app router shell
+app/                  Next.js app router shell, metadata, OG image, robots/sitemap/manifest
 components/
   EqualEarthMap.tsx   Canvas, pan/zoom, data loading, render scheduling
   ControlPanel.tsx    Layer and projection controls
 lib/
   projections.ts      Projection registry (pseudocylindrical only)
   styles.ts           Base-map themes and layer definitions
+  site.ts             Site name, URL and description shared by metadata routes
   data.ts             TopoJSON/GeoJSON loading, country colouring, image cache
   raster.ts           Scanline raster reprojection
   render.ts           The frame: base, overlays, labels
 public/data/          Natural Earth vectors, pre-trimmed
 public/textures/      Relief, hillshade, satellite, night imagery
+scripts/              Icon generator (make-icons.mjs)
 ```
 
 ## Data provenance
