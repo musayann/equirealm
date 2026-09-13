@@ -60,7 +60,7 @@ function ControlPanel({
           aria-expanded={open}
         >
           <span className="flex-1">
-            <span className="block text-sm font-semibold tracking-tight">Equal Earth</span>
+            <span className="block text-sm font-semibold tracking-tight">Equirealm</span>
             <span className={`block text-[11px] ${muted}`}>
               {loading ? "Loading world data…" : "Equal-area world map"}
             </span>

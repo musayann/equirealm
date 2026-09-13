@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Equal Earth",
+  title: "Equirealm",
   description:
     "A full-screen, zoomable Equal Earth world map with political, relief, satellite and night-light layers.",
 };

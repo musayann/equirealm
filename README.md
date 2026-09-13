@@ -1,4 +1,4 @@
-# Equal Earth
+# Equirealm
 
 A full-screen, zoomable world map on the **Equal Earth** projection, built with Next.js and
 `d3-geo`. Switch between a political map, shaded relief, satellite imagery and night lights, and
